@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mulago Hospital – Outpatient Appointment Request</title>
+</head>
+
+<body>
+    <h1>Mulago National Referral Hospital</h1>
+    <h2>Outpatient Appointment Request Form</h2>
+
+    <form action="/appointments/submit" method="post">
+
+        <p>
+            <label for="fullname">Full name:</label><br>
+            <input type="text" name="fullname" maxlength="80" placeholder="e.g. Aisha Nakato" required>
+        </p>
+
+        <p>
+            <label for="phone">Phone number:</label><br>
+            <input type="tel" name="phone" placeholder="e.g. 0771234567 required">
+        </p>
+
+        <p>
+            <label for="email">Email address:</label><br>
+            <input type="email" name="email" maxlength="100" placeholder="you@example.com" required>
+        </p>
+
+        <p>
+            <label for="dob">Date of birth:</label><br>
+            <input type="date" name="dob" placeholder="dd-mm-yyyy" required>
+        </p>
+
+
+        <legend>Patient type:</legend>
+        <input type="radio" name="patienttype" value="New" required>
+        <label for="newpatient">New</label>
+        <input type="radio" name="patienttype" value="Returning">
+        <label for="returning">Returning</label>
+
+        <p>
+            <label for="clinic">Preferred clinic:</label><br>
+            <select name="clinic" required>
+                <option value="">-- Select a clinic --</option>
+                <option value="general">General Outpatient Clinic</option>
+                <option value="paediatrics">Paediatrics Clinic</option>
+                <option value="antenatal">Antenatal / Postnatal Clinic</option>
+                <option value="cardiology">Cardiology Clinic</option>
+                <option value="dermatology">Dermatology Clinic</option>
+                <option value="ophthalmology">Ophthalmology (Eye) Clinic</option>
+                <option value="dental">Dental Clinic</option>
+            </select>
+        </p>
+
+
+        <p>
+            <label for="appdate">Preferred date:</label><br>
+            <input type="date" name="appdate" required>
+        </p>
+
+        <p>
+            <label for="apptime">Preferred time:</label><br>
+            <input type="time" name="apptime" required>
+        </p>
+
+
+        <p>
+            <label for="symptoms">Brief description of symptoms:</label><br>
+            <textarea name="symptoms" placeholder="Describe your symptoms"></textarea>
+        </p>
+
+        <p>
+            <button type="submit">Request Appointment</button>
+            <button type="reset">Clear Form</button>
+        </p>
+    </form>
+</body>
+
+</html>
